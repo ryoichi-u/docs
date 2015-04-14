@@ -1,49 +1,49 @@
 Bookmarker Tutorial
 ###################
 
-This tutorial will walk you through the creation of a simple bookmarking
-application (bookmarker). To start with, we'll be installing CakePHP, creating
-our database, and using the tools CakePHP provides to get our application up
-fast.
 
-Here's what you'll need:
+このチュートリアルはブックマークするシンプルなアプリケーション(ブックマーカー)を
+あなたと作っていくものになります。始めるに当たって一緒にCakePHPをインストールし、
+データベースを作り、CakePHPが提供するアプリケーションを
+素早くつくり上げるツールを使います。
 
-#. A database server. We're going to be using MySQL server in this tutorial.
-   You'll need to know enough about SQL in order to create a database: CakePHP
-   will be taking the reins from there. Since we're using MySQL, also make sure
-   that you have ``pdo_mysql`` enabled in PHP.
-#. Basic PHP knowledge.
+必要な環境は以下になります:
 
-Let's get started!
+#. データベースサーバー
+   このチュートリアルではMySQLを使用したいと思います。
+   あなたはデータベースを作るためにSQLを十分に知る必要が出てきます。
+   CakePHPはそこからアプリケーションを統率します。
+   MySQLを使い始める前にpdo_mysqlがPHPで有効になっているか確認して下さい
+#. 基礎的なPHPの知識
 
-Getting CakePHP
+さあ始めてみましょう
+
+CakePHPを入手する
 ===============
 
-The easiest way to install CakePHP is to use Composer.  Composer is a simple way
-of installing CakePHP from your terminal or command line prompt.  First, you'll
-need to download and install Composer if you haven't done so already. If you
-have cURL installed, it's as easy as running the following::
+最も簡単なCakePHPのインストール方法はComposerを利用する方法です。
+ComposerはチュートリアルやコマンドラインのプロンプトからCakePHPを
+インストールするシンプルな方法の一つです。
+まずはじめに、Composerをまだインストールしていないなら
+ダウンロードとインストールをする必要があります。
+もしcurlコマンドが利用できるなら以下のコマンドで簡単に入手することができます。::
 
     curl -s https://getcomposer.org/installer | php
 
-Or, you can download ``composer.phar`` from the
+また、 ``composer.phar`` はこちらからもダウンロードできます
 `Composer website <https://getcomposer.org/download/>`_.
 
-Then simply type the following line in your terminal from your
-installation directory to install the CakePHP application skeleton
-in the **bookmarker** directory. ::
+そしてあなたのターミナルコマンドから簡単に
+ **bookmarker** のディレクトリ内のCakePHPをインストールするインストール用のディレクトリ位置から以下の簡単なコマンドを入力します。::
 
     php composer.phar create-project --prefer-dist cakephp/app bookmarker
 
-The advantage to using Composer is that it will automatically complete some
-important set up tasks, such as setting the correct file permissions and
-creating your **config/app.php** file for you.
+Composerを使うことの利点はファイルの権限や **config/app.php** ファイルの設定など自動でいくつかの重要な設定を行ってくれることです
 
-There are other ways to install CakePHP. If you cannot or don't want to use
-Composer, check out the :doc:`/installation` section.
+CakePHPをインストールする他の方法も有ります。Composerを使いたくない場合は、マニュアルの :doc:`/installation` の章をご覧になってください。
 
-Regardless of how you downloaded and installed CakePHP, once your set up is
-completed, your directory setup should look something like the following::
+どんな方法でインストールしたかに関係なく
+一度設定が終わったら以下のようなディレクトリ構造をしているはずです。::
 
     /bookmarker
         /bin
@@ -64,8 +64,7 @@ completed, your directory setup should look something like the following::
         phpunit.xml.dist
         README.md
 
-Now might be a good time to learn a bit about how CakePHP's directory structure
-works: check out the :doc:`/intro/cakephp-folder-structure` section.
+Cakeのディレクトリ構造がどのようになっているかを知るいい機会ですので詳しくは :doc:`/intro/cakephp-folder-structure` の章を御覧ください。
 
 Checking our Installation
 =========================
